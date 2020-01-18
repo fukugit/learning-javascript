@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server -o",
-    "test": "mocha"
+    "test": "mocha",
+    "build": "browserify index.js > ./build/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,9 @@
   },
   "homepage": "https://github.com/fukugit/learning-javascript#readme",
   "devDependencies": {
-    "http-server": "^0.12.1",
+    "browserify": "^16.5.0",
     "chai": "^4.2.0",
+    "http-server": "^0.12.1",
     "mocha": "^7.0.0"
   }
 }
