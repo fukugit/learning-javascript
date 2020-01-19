@@ -19,6 +19,18 @@ function factorial(x) {
   return x * factorial(x-1);
 }
 
+/**
+ * 入れ子となっている関数定義です。
+ * @param  {Number} x 演算対象の値
+ * @param  {Number} y 演算対象の値
+ * @return {Number}   xとyのsqrt(平方根)値
+ */
+function hypotenuse(a,b) {
+  function square(x) {return x * x}
+  return Math.sqrt(square(a) + square(b)); // ここで入れ子の関数を呼び出します。
+}
+
 /** 下記以降はNode.jsのexportsへ関数を定義しています。JavaScriptの関数とは関係ありません。 */
 exports.plus = plus;
 exports.factorial = factorial;
+exports.hypotenuse = hypotenuse;
