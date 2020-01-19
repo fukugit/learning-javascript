@@ -1,6 +1,6 @@
 # learning-javascript
-![image](https://raw.githubusercontent.com/fukugit/images/master/leaning-javascript.jpg)
 This is just a JavaScript note book that I learn JavaScript with the book.  
+![image](https://raw.githubusercontent.com/fukugit/images/master/leaning-javascript.jpg)
 
 ## Getting Started
 The some example JavaScript code in this project can be ran on local environment.  
@@ -20,7 +20,7 @@ This project is consists of npm. And it is necessary to install Mocha library to
 ## Consists
 This project consists of some JavaScript file that are defined in leaning JavaScript book each section.  
 ### 8章 関数
-[This programs are that I learned in the section.](js/8function.js)  
+[This programs are that I learned in the section of 8章 関数.](js/8function.js)  
 
 ## Running
 ### Run test function
