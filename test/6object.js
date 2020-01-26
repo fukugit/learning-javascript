@@ -5,12 +5,32 @@
  * 2. プロトタイプを使ったオブジェクトの継承を実施します。
  */
 
+/** this is for Mocha */
+var chai = require('chai');
+var assert = chai.assert;
 
 /************ 1. オブジェクトリテラルの様々なパターン ************/
 var empty1 = {};                              // プロパティを持たないオブジェクトを生成
+empty1.name = "その1";
 var empty2 = new Object();                    // 上記と同じオブジェクトを生成
+empty2.name = "その2";
 var empty3 = Object.create(Object.prototype); // 上記と同じ。引数へはObject.prototypeが必要。
-var point = {x:0, y:0};
+empty3.name = "その3";
+var point4 = {name:"その4", y:0};
+
+/*** Testing by Mohca ***/
+describe('6章オブジェクト: 1. オブジェクトリテラルの様々なパターン', function () {
+  it('empty1の確認',
+    function(){assert.strictEqual(empty1.name, "その1") });
+  it('empty2の確認',
+    function(){assert.strictEqual(empty2.name, "その2") });
+  it('empty3の確認',
+    function(){assert.strictEqual(empty3.name, "その3") });
+  it('point4の確認',
+    function(){assert.strictEqual(point4.name, "その4") });
+});
+
+
 
 /************ 2. プロトタイプを使ったオブジェクトの継承 ************/
 /**
@@ -64,16 +84,10 @@ function getOsakaRegion() {
   return osaka.region;
 }
 
-
-/************ Testing by Mohca ************/
-
-var chai = require('chai');
-var assert = chai.assert;
-
-describe('6章オブジェクト, 2. プロトタイプを使ったオブジェクトの継承', function () {
+/*** Testing by Mohca ***/
+describe('6章オブジェクト: 2. プロトタイプを使ったオブジェクトの継承', function () {
   it('親オブジェクトが継承できていることを確認します。 ',
     function(){assert.strictEqual(getTokyoArea(), "東の小さな国") });
   it('子オブジェクトのフィールドが参照できることを確認します。 ',
     function(){assert.strictEqual(getOsakaRegion(), "かんさい") });
-
 });
