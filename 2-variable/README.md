@@ -49,31 +49,56 @@ var f = 0;
 ```
 <br>
 
-### 
+### イコール3つの比較(厳格な等価)
 ```javascript
+let a = 1;
+let b = '1';
+
+// 型を含めて比較するので falseとなります。
+console.log(a === b);
 ```
 <br>
 
-### 
+### イコール2つの比較(抽象的な等価)
 ```javascript
+let a = 1;
+let b = '1';
+
+// 型を含めずに比較するので trueとなります。
+console.log(a == b);
 ```
 <br>
 
-### 
+### Falseになる値
 ```javascript
+let a = 0;
+console.log(Boolean(a));
+
+let b = null;
+console.log(Boolean(b));
+
+let c = false;
+console.log(Boolean(c));
+
+let d; // undefined
+console.log(Boolean(d));
+
+let e = 0n; // BigInt
+console.log(Boolean(e));
+
+let f = NaN; // 0割り算結果
+console.log(Boolean(f));
+
+let g = '';
+console.log(Boolean(g));
 ```
 <br>
 
-### 
+### Trueになる値
 ```javascript
-```
-<br>
-### 
-```javascript
-```
-<br>
+// 上記以外は全てTtueになります。
 
-### 
-```javascript
+let h = 1;
+console.log(Boolean(h));
 ```
 <br>
