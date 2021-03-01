@@ -6,11 +6,10 @@
 
 - [学んだこと](#%E5%AD%A6%E3%82%93%E3%81%A0%E3%81%93%E3%81%A8)
   - [変数の違い](#%E5%A4%89%E6%95%B0%E3%81%AE%E9%81%95%E3%81%84)
-  - [](#)
-  - [](#-1)
-  - [](#-2)
-  - [](#-3)
-  - [](#-4)
+  - [イコール3つの比較(厳格な等価)](#%E3%82%A4%E3%82%B3%E3%83%BC%E3%83%AB3%E3%81%A4%E3%81%AE%E6%AF%94%E8%BC%83%E5%8E%B3%E6%A0%BC%E3%81%AA%E7%AD%89%E4%BE%A1)
+  - [イコール2つの比較(抽象的な等価)](#%E3%82%A4%E3%82%B3%E3%83%BC%E3%83%AB2%E3%81%A4%E3%81%AE%E6%AF%94%E8%BC%83%E6%8A%BD%E8%B1%A1%E7%9A%84%E3%81%AA%E7%AD%89%E4%BE%A1)
+  - [Falseになる値](#false%E3%81%AB%E3%81%AA%E3%82%8B%E5%80%A4)
+  - [Trueになる値](#true%E3%81%AB%E3%81%AA%E3%82%8B%E5%80%A4)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <br>
