@@ -80,3 +80,44 @@ const person = {
   }
 }
 person.hello();
+
+/* 
+  参照コピーするとthisが保持する内容が変更します。
+ */
+const person2 = {
+  name: 'Tom',
+  hello: function() {
+    console.log('hello ' + this.name);
+  }
+}
+
+// helloを参照コピーしています。
+const ref = person2.hello;
+
+// refはnameを持っていない状態です。
+// よって実行結果は、「hello」のみとなります。
+ref();
+
+// しかし、下記のようにwindowにnameを追加すると実行結果は、「hello Jhon」となります。
+window.name = "Jhon";
+ref();
+
+/* 
+  コールバック関数とthis
+ */
+const person3 = {
+  name: 'Tom',
+  hello: function() {
+    console.log('hello3 ' + this.name);
+  }
+}
+
+// refはコールバック関数です。
+function fn6(ref) {
+  // 関数内で呼ばれたthisの参照元はグローバルオブジェクト(window)になります。
+  // メソッドとして呼ばれた場合のみがthisが呼び出し元オブジェクトとなります。
+  ref();
+}
+
+window.name = "Jhon";
+fn6(person3.hello); // 結果は、「hello3 Jhon」になります。
