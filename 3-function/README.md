@@ -212,9 +212,11 @@ fn8Const();
 ```
 <br>
 
-### apply(thisを指定して実行する。関数への引数は指定できません。ただし配列でなら指定可能です。)
+### apply
 ```javascript
 /* 
+  applyとは、thisを指定して実行するものです。
+  関数への引数は指定できません。ただし配列でなら指定可能です。
   bindとの違いは、applyしたタイミングで関数が実行されます。
  */
 function fn9() {
@@ -229,9 +231,10 @@ fn9.apply(tim9);
 ```
 <br>
 
-### call(thisを指定して実行する。そして関数に引数を指定します。)
+### call
 ```javascript
 /* 
+  callとは、thisを指定して実行するものです。そして関数に引数を指定します。
   bindとの違いは、applyしたタイミングで関数が実行されます。
   applyとの違いは引数の渡し方が簡単に行えます。
  */
@@ -248,8 +251,33 @@ fn10.call(tim10, 'name10');
 ```
 <br>
 
-### 
+### アロー関数の基礎
 ```javascript
+// 普通の関数です。
+const fn11 = function(name) {
+  console.log('fn11 ' + name);
+}
+fn11('Mike');
+
+// 上記をアロー関数に書き換えます
+const fn12 = (name) => {
+  console.log('fn12 ' + name);
+}
+fn12('Mike');
+
+// 引数が１つの場合のみ()が省略できます。
+const fn13 = name => {
+  console.log('fn13 ' + name);
+}
+fn13('Mike');
+
+// 関数内が１行の場合は{}を省略できます。
+const fn14 = name => console.log('fn14 ' + name);
+fn14('Mike');
+
+// 引数無しの場合は、()の代わりに_が使えます。（があまり使いません）
+const fn15 = _ => console.log('fn15');
+fn15();
 ```
 <br>
 

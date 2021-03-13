@@ -184,3 +184,31 @@ const tim10 = {name: 'tim10'};
 // 第1引数はthis、第2引数は関数の引数を指定します。
 // 実行結果は、hello10 tim10name10 です。
 fn10.call(tim10, 'name10');
+
+/* 
+  アロー関数の基礎
+ */
+const fn11 = function(name) {
+  console.log('fn11 ' + name);
+}
+fn11('Mike');
+
+// 上記をアロー関数に書き換えます
+const fn12 = (name) => {
+  console.log('fn12 ' + name);
+}
+fn12('Mike');
+
+// 引数が１つの場合のみ()が省略できます。
+const fn13 = name => {
+  console.log('fn13 ' + name);
+}
+fn13('Mike');
+
+// 関数内が１行の場合は{}を省略できます。
+const fn14 = name => console.log('fn14 ' + name);
+fn14('Mike');
+
+// 引数無しの場合は、()の代わりに_が使えます。（があまり使いません）
+const fn15 = _ => console.log('fn15');
+fn15();
