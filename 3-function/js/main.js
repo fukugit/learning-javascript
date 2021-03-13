@@ -102,6 +102,9 @@ ref();
 window.name = "Jhon";
 ref();
 
+
+
+
 /* 
   コールバック関数とthis
  */
@@ -121,3 +124,63 @@ function fn6(ref) {
 
 window.name = "Jhon";
 fn6(person3.hello); // 結果は、「hello3 Jhon」になります。
+
+/* 
+  bindでthisの値を束縛(指定)する。
+ */
+const person4 = {
+  name: 'Tom',
+  hello: function() {
+    console.log('hello4 ' + this.name);
+  }
+}
+
+// refはコールバック関数です。
+function fn7(ref) {
+  ref();
+}
+
+// bindすることによって、コールバック関数で実行してもthisは常にperson4を指すことになります。
+const callback7 = person4.hello.bind(person4);
+fn7(callback7);
+
+
+
+/* 
+  bindでthisの値を直接指定する。
+ */
+function fn8() {
+  console.log('hello8 ' + this.name);
+}
+
+// bindでthisが指定してるプロパティを name: "Tom"のように指定できます。
+const fn8Const = fn8.bind({name: "Tom"});
+fn8Const();
+
+/* 
+  apply(thisを指定して実行する。関数への引数は指定できません。ただし配列でなら指定可能です。)
+  bindとの違いは、applyしたタイミングで関数が実行されます。
+ */
+function fn9() {
+  console.log('hello9 ' + this.name);
+}
+const tim9 = {name: 'tim9'};
+
+// このタイミングでfn9が実行されます。
+// 実行結果は、hello9 tim9 です。
+fn9.apply(tim9);
+
+/* 
+  call(thisを指定して実行する。そして関数に引数を指定します。)
+  bindとの違いは、applyしたタイミングで関数が実行されます。
+  applyとの違いは引数の渡し方が簡単に行えます。
+ */
+function fn10(firstname) {
+  console.log('hello10 ' + this.name + firstname);
+}
+const tim10 = {name: 'tim10'};
+  
+// このタイミングでfn10が実行されます。
+// 第1引数はthis、第2引数は関数の引数を指定します。
+// 実行結果は、hello10 tim10name10 です。
+fn10.call(tim10, 'name10');
