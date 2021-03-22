@@ -17,10 +17,10 @@
   - [コールバック関数とthis](#%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E9%96%A2%E6%95%B0%E3%81%A8this)
   - [bindでthisの値を束縛(指定)する](#bind%E3%81%A7this%E3%81%AE%E5%80%A4%E3%82%92%E6%9D%9F%E7%B8%9B%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B)
   - [bindでthisの値を直接指定する。](#bind%E3%81%A7this%E3%81%AE%E5%80%A4%E3%82%92%E7%9B%B4%E6%8E%A5%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B)
-  - [apply(thisを指定して実行する。関数への引数は指定できません。ただし配列でなら指定可能です。)](#applythis%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E9%96%A2%E6%95%B0%E3%81%B8%E3%81%AE%E5%BC%95%E6%95%B0%E3%81%AF%E6%8C%87%E5%AE%9A%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%9F%E3%81%A0%E3%81%97%E9%85%8D%E5%88%97%E3%81%A7%E3%81%AA%E3%82%89%E6%8C%87%E5%AE%9A%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99)
-  - [call(thisを指定して実行する。そして関数に引数を指定します。)](#callthis%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%81%9D%E3%81%97%E3%81%A6%E9%96%A2%E6%95%B0%E3%81%AB%E5%BC%95%E6%95%B0%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%BE%E3%81%99)
+  - [apply](#apply)
+  - [call](#call)
+  - [アロー関数の基礎](#%E3%82%A2%E3%83%AD%E3%83%BC%E9%96%A2%E6%95%B0%E3%81%AE%E5%9F%BA%E7%A4%8E)
   - [](#)
-  - [](#-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <br>
