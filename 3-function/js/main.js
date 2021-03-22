@@ -212,3 +212,39 @@ fn14('Mike');
 // 引数無しの場合は、()の代わりに_が使えます。（があまり使いません）
 const fn15 = _ => console.log('fn15');
 fn15();
+
+/* 
+  アロー関数のthis
+ */
+window.name16 = 'John16';
+
+const fn16 = {
+  name16: 'Tom16',
+  hello16: () => {
+    console.log('hello ' + this.name16);
+  },
+}
+
+/* 
+  実行結果は、hello John16 となります。
+  アロー関数はthisで呼び出し元オブジェクトを参照しないため、
+  グローバルオブジェクトの値が表示されてしまいます。
+ */
+fn16.hello16();
+
+/* 
+  無名関数
+ */
+const fn17 = {
+  name17: 'Tom17',
+  /* 無名関数定義 */
+  hello17: function() {
+    console.log('hello old ' + this.name17);
+  },
+  /* ES6で無名関数定義 */
+  newhello17() {
+    console.log('hello new ' + this.name17);
+  }
+}
+fn17.hello17();
+fn17.newhello17();
