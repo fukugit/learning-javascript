@@ -323,3 +323,16 @@ const fn17 = {
 fn17.hello17();
 fn17.newhello17();
 ```
+
+### コンストラクター関数
+```javascript
+function fn18(name, age) {
+  this.name = name;
+  this.age = age;
+  console.log('fn18 ' + this.name + ' ' + this.age);
+}
+// fn18 Bob 18 と表示されます。
+const bob = new fn18('Bob', 18);
+// fn18 Tom 28 と表示されます。
+const tom = new fn18('Tom', 28);
+```

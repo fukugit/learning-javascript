@@ -248,3 +248,14 @@ const fn17 = {
 }
 fn17.hello17();
 fn17.newhello17();
+
+/* 
+  コンストラクター関数
+ */
+function fn18(name, age) {
+  this.name = name;
+  this.age = age;
+  console.log('fn18 ' + this.name + ' ' + this.age);
+}
+const bob = new fn18('Bob', 18);
+const tom = new fn18('Tom', 28);
