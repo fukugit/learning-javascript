@@ -23,6 +23,12 @@
   - [アロー関数のthis](#%E3%82%A2%E3%83%AD%E3%83%BC%E9%96%A2%E6%95%B0%E3%81%AEthis)
   - [無名関数(ES6での書き方)](#%E7%84%A1%E5%90%8D%E9%96%A2%E6%95%B0es6%E3%81%A7%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9)
   - [コンストラクター関数](#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E9%96%A2%E6%95%B0)
+  - [prototype](#prototype)
+  - [new演算子](#new%E6%BC%94%E7%AE%97%E5%AD%90)
+  - [instanceof](#instanceof)
+  - [関数コンストラクタ](#%E9%96%A2%E6%95%B0%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF)
+  - [](#)
+  - [](#-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <br>
