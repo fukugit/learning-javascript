@@ -18,6 +18,7 @@ JavaScriptで勉強したことのまとめです。
 | [変数スコープ](./1-scope)     |                     |
 | [変数](./2-variable)     |                     |
 | [関数](./3-function)     |                     |
+| [クラスについて](./4-class)     |                     |
 | [Objectについて](./1-object)     | Objectの基礎                    |
 |                                                |                   |
 |                                                |                  |

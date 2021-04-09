@@ -259,3 +259,70 @@ function fn18(name, age) {
 }
 const bob = new fn18('Bob', 18);
 const tom = new fn18('Tom', 28);
+
+/* 
+  prototype
+  propotypeとは、オブジェクトに関する特別なプロパティ
+  関数に対して、後付けでメソッドを加えることができます。
+ */
+function fn19(name, age) {
+  this.name = name;
+  this.age = age;
+  console.log('fn19 ' + this.name + ' ' + this.age);
+}
+fn19.prototype.hello = function() {
+  console.log('hello 19 ' + this.name);
+}
+const bob2 = new fn19('Boob', 18);
+bob2.hello();
+
+// 上記は以下と同じ意味になります。
+function fn20(name, age) {
+  this.name = name;
+  this.age = age;
+  this.hello = function() {
+    console.log('hello 20 ' + this.name);
+  }
+  console.log('fn19 ' + this.name + ' ' + this.age);
+}
+const bob3 = new fn20('Boob', 18);
+bob3.hello();
+
+
+/* 
+  new演算子
+ */
+
+/* 
+  instanceof
+ */
+function fn21(name, age) {
+  this.name = name;
+  this.age = age;
+}
+const newfn21 = new fn21('test', 20);
+// trueになります。
+console.log(newfn21 instanceof fn21);
+
+function fn22(name, age) {
+  this.name = name;
+  this.age = age;
+  return {};
+}
+const newfn22 = new fn22('test', 20);
+// falseになります。fn22のオブジェクトが{}であるためです。
+console.log(newfn22 instanceof fn22);
+
+/* 
+  関数コンストラクタ
+  関数コンストラクタとは、new Function(100) のようして実行可能なオブジェクトを作成することです。
+ */
+const fn23 = new Function('a', 'b', 'return a + b');
+// 3 が表示されます。
+console.log(fn23(1,2));
+
+// new Function() は下記と同じ意味になります。
+function fn24(a, b) {
+  return a + b;
+}
+console.log(fn23 instanceof Function);
