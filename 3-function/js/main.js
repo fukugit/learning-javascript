@@ -292,6 +292,18 @@ bob3.hello();
 /* 
   new演算子
  */
+function F(a, b) {
+  this.a = a;
+  this.b = b;
+  // returnを書かなくても F()が返却されます。
+}
+
+const instancef = new F(1,2);
+
+// new F()のprototypeに定義するこも可能です。
+instancef.prototype.c = function(){};
+
+console.log(instancef);
 
 /* 
   instanceof

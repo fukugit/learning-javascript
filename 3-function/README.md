@@ -325,6 +325,7 @@ const fn17 = {
 fn17.hello17();
 fn17.newhello17();
 ```
+<br>
 
 ### コンストラクター関数
 ```javascript
@@ -338,6 +339,7 @@ const bob = new fn18('Bob', 18);
 // fn18 Tom 28 と表示されます。
 const tom = new fn18('Tom', 28);
 ```
+<br>
 
 ### prototype
 ```javascript
@@ -368,11 +370,24 @@ function fn20(name, age) {
 const bob3 = new fn20('Boob', 18);
 bob3.hello();
 ```
+<br>
 
 ### new演算子
 ```javascript
-あとで
+function F(a, b) {
+  this.a = a;
+  this.b = b;
+  // returnを書かなくても F()が返却されます。
+}
+
+const instancef = new F(1,2);
+
+// new F()のprototypeに定義するこも可能です。
+instancef.prototype.c = function(){};
+
+console.log(instancef);
 ```
+<br>
 
 ### instanceof
 ```javascript
@@ -394,6 +409,7 @@ const newfn22 = new fn22('test', 20);
 console.log(newfn22 instanceof fn22);
 
 ```
+<br>
 
 ### 関数コンストラクタ
 ```javascript
@@ -410,14 +426,17 @@ function fn24(a, b) {
 }
 console.log(fn23 instanceof Function);
 ```
+<br>
 
 ### 
 ```javascript
 ```
+<br>
 
 ### 
 ```javascript
 ```
+<br>
 
 
 
