@@ -37,10 +37,35 @@ Person.prototype.hello = function() {
 ```
 <br>
 
+
 ### クラス継承
 ```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  hello() {
+    console.log(this.name + " " +this.age);
+  }
+}
+
+// Personを継承します。
+class Japanese extends Person {
+  constructor(name, age, gender) {
+    super(name, age);
+    this.gender = gender;
+  }
+  bye() {
+    console.log("bye " + this.name)
+  }
+}
+const japanese = new Japanese("Mike", 23, "man");
+japanese.bye();
 ```
 <br>
+
+
 
 ### 
 ```javascript
